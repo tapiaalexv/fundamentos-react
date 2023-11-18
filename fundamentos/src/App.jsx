@@ -1,35 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+//import { Fragment } from "react"; -> similar a una etiqueta vacia
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    const title = "Mi titulo desde una constante";
 
-export default App
+    return (
+        <>
+            <h1 className="text-center">{title.toUpperCase()}</h1>;
+            <img src="https://picsum.photos/200/300" alt="" />
+        </>
+    );
+
+
+};
+export default App;
+//solo se puede export una vez por defecto por archivo
+
+/*export const App = () => {
+    return <h1>Hola soy React</h1>
+}*/
